@@ -1,7 +1,7 @@
 #include <sourcemod>
 #include <ripext>
 
-#define REMOTE_SERVER "http://192.168.31.237:14725"
+#define REMOTE_SERVER "http://localhost:14725"
 
 forward void Shavit_OnReplaySaved(int client, int style, float time, int jumps, int strafes, float sync, int track, float oldtime, float perfs, float avgvel, float maxvel, int timestamp, bool isbestreplay, bool istoolong, bool iscopy, const char[] replaypath);
 

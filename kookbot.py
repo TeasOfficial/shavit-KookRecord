@@ -23,8 +23,11 @@ bot = Bot(token="123456789")
 # 如果没有Token，请先到 KOOK 开发者中心创建新的应用
 # https://developer.kookapp.cn/app/index
 
-SERVEPORT = 8080
+SERVEPORT = 14725
 # 服务器运行时端口
+
+CHANNELID = "6653477553425031"
+# 子频道ID，务必修改！
 
 routes = web.RouteTableDef()
 
@@ -48,7 +51,7 @@ async def hello_world(request):
             avatarurl = await resp.text()
 
 
-    ch = await bot.client.fetch_public_channel("6653477553425031")
+    ch = await bot.client.fetch_public_channel(CHANNELID)
     cm = CardMessage()
     c = Card(
         Module.Header(data['map']),
